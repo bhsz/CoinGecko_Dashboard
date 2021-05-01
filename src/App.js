@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import FavouritesPage from "./components/FavouritesPage";
+import HomePage from "./components/HomePage";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [favourites, setFavourites] = useState([]);
+
+	return (
+		<div className="App">
+			<Router>
+				<Link to="/">
+					<button type="button">Home</button>
+				</Link>
+				<Link to="/favourites">
+					<button type="button">Favourites</button>
+				</Link>
+				<Route exact path="/" render={() => <HomePage favourites={favourites} setFavourites={setFavourites} />} />
+				<Route path="/favourites" render={() => <FavouritesPage favourites={favourites} setFavourites={setFavourites} />} />
+			</Router>
+		</div>
+	);
 }
 
 export default App;

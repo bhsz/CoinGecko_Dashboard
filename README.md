@@ -1,4 +1,4 @@
-# Simple Cryptocurrency Dashboard built with [Create React App](https://github.com/facebook/create-react-app) and CoinGecko API
+# Simple Cryptocurrency Dashboard built with [Create React App](https://github.com/facebook/create-react-app) and [CoinGecko API](https://www.coingecko.com/en/api)
 
 ## Available Scripts
 

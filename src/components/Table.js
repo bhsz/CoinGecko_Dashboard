@@ -55,7 +55,7 @@ export default function Table({ loading, data, setData, favourites, setFavourite
 					<th onClick={() => handleSort("symbol")}>Symbol</th>
 					<th onClick={() => handleSort("current_price")}>Price ({currency.toUpperCase()})</th>
 					<th onClick={() => handleSort("total_volume")}>Volume ({currency.toUpperCase()})</th>
-					<th>Sparkline (USD)</th>
+					<th>Sparkline</th>
 					<th>Favourite</th>
 				</tr>
 			</thead>

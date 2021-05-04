@@ -2,10 +2,10 @@ import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import FavouritesPage from "./components/FavouritesPage";
 import HomePage from "./components/HomePage";
-import { useState } from "react";
+import useFavourites from "./hooks/useFavourites";
 
 function App() {
-	const [favourites, setFavourites] = useState([]);
+	const {favourites, setFavourites} = useFavourites();
 
 	return (
 		<div className="App">
